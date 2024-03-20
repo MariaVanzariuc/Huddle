@@ -1,0 +1,235 @@
+.footer {
+  display: flex;
+  flex-direction: column;
+
+  color: #fff;
+
+  &__img-desktop {
+    display: block;
+
+    @include respond(phone-sm) {
+      display: none;
+    }
+  }
+
+  &__img-mobile {
+    display: none;
+
+    @include respond(phone-sm) {
+      display: block;
+    }
+  }
+
+  &__content {
+    display: flex;
+    justify-content: space-around;
+    background-color: var(--color-neutral-dark);
+    padding: 10rem 0 0 0;
+
+    @include respond(tab-port) {
+      gap: 5rem;
+      padding: 10rem 0 5rem 0;
+    }
+
+    @include respond(phone-sm) {
+      flex-direction: column-reverse;
+      align-items: center;
+      gap: 20rem;
+    }
+
+    &__info {
+      display: flex;
+      flex-direction: column;
+      gap: 2rem;
+
+      @include respond(phone-sm) {
+        gap: 4rem;
+      }
+
+      &__logo {
+        width: 15vw;
+
+        @include respond(tab-port) {
+          width: 13vw;
+        }
+
+        @include respond(phone-sm) {
+          width: 40vw;
+        }
+      }
+
+      &__p {
+        font-size: 1.9rem;
+        line-height: 1.5;
+        width: 40rem;
+        text-wrap: wrap;
+
+        @include respond(tab-port) {
+          font-size: 1.5rem;
+          width: 38rem;
+          margin-bottom: 3rem;
+        }
+
+        @include respond(phone) {
+          font-size: 2rem;
+          margin-bottom: 3rem;
+        }
+
+        @include respond(phone-sm) {
+          font-size: 3.5rem;
+          width: 70rem;
+          margin-bottom: 5rem;
+        }
+      }
+
+      &__phone {
+        display: flex;
+        align-items: center;
+        gap: 1.5rem;
+        font-size: 1.9rem;
+        @include respond(tab-port) {
+          font-size: 1.5rem;
+        }
+        @include respond(phone) {
+          font-size: 2rem;
+        }
+
+        @include respond(phone-sm) {
+          font-size: 3.7rem;
+          gap: 4rem;
+        }
+        i {
+          font-size: 1.9rem;
+
+          @include respond(tab-port) {
+            font-size: 1.5rem;
+          }
+
+          @include respond(phone) {
+            font-size: 2rem;
+          }
+
+          @include respond(phone-sm) {
+            font-size: 3.7rem;
+          }
+        }
+      }
+
+      &__icons {
+        display: flex;
+        justify-content: flex-start;
+        padding: 5rem 0;
+        gap: 2rem;
+        transition: all 0.2s;
+        cursor: pointer;
+
+        @include respond(phone) {
+          gap: 3rem;
+        }
+
+        @include respond(phone-sm) {
+          gap: 4rem;
+        }
+
+        i {
+          font-size: 3.5rem;
+
+          @include respond(tab-port) {
+            font-size: 2.9rem;
+          }
+
+          @include respond(phone) {
+            font-size: 3.9rem;
+          }
+
+          @include respond(phone-sm) {
+            font-size: 5.5rem;
+          }
+
+          &:active {
+            color: aqua;
+          }
+        }
+      }
+    }
+
+    &__newsletter {
+      display: flex;
+      flex-direction: column;
+      gap: 1rem;
+
+      &__text {
+        font-size: 1.9rem;
+        line-height: 1.5;
+        width: 40rem;
+        text-wrap: wrap;
+        margin-bottom: 3rem;
+
+        @include respond(tab-port) {
+          font-size: 1.5rem;
+        }
+
+        @include respond(phone) {
+          font-size: 2rem;
+        }
+
+        @include respond(phone-sm) {
+          font-size: 3.5rem;
+          width: 70rem;
+          margin-bottom: 5rem;
+        }
+      }
+
+      &__form {
+        display: flex;
+        gap: 5rem;
+
+        @include respond(tab-port) {
+          flex-direction: column;
+          gap: 2rem;
+        }
+
+        @include respond(phone) {
+          flex-direction: column;
+        }
+
+        &__input-container {
+          position: relative;
+
+          &__input {
+            font-size: 1.8rem;
+            color: #555;
+            border-radius: 5px;
+            cursor: pointer;
+            width: 30rem;
+            padding: 2rem 0 2rem 1rem;
+
+            @include respond(tab-port) {
+              font-size: 1.5rem;
+              padding: 1.6rem 0 1.6rem 1rem;
+              width: 100%;
+            }
+
+            @include respond(phone-sm) {
+              font-size: 3rem;
+              padding: 2.1rem 0 2.1rem 1rem;
+            }
+
+            &__error-message {
+              position: absolute;
+              display: none;
+              top: 7rem;
+              color: var(--color-secondary);
+              font-size: 1.4rem;
+            }
+
+            &:invalid:focus
+              ~ .footer__content__newsletter__form__input-container__input__error-message {
+              display: block;
+            }
+          }
+        }
+      }
+    }
+  }
+}

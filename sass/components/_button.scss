@@ -1,31 +1,73 @@
 .btn {
-  font-size: 1.5rem;
-  font-weight: 400;
+  font-size: 2rem;
+  font-family: "Poppins";
+  font-weight: 600;
   background-color: var(--color-primary);
   color: #fff;
-  padding: 1.8rem 6rem;
+  padding: 2.5rem 10rem;
   border: none;
   border-radius: 100rem;
   cursor: pointer;
   box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.2);
   transition: all 0.2s;
 
+  @include respond(phone) {
+    padding: 2rem 8rem;
+  }
+
+  @include respond(phone-sm) {
+    font-size: 3rem;
+    padding: 3rem 9rem;
+  }
+
   &:active {
     background-color: var(--color-primary-light);
   }
 
   &--outline {
-    font-size: 1.3rem;
+    font-size: 1.5rem;
     background-color: #fff;
     color: var(--color-primary);
     border: 1px solid var(--color-primary);
     padding: 0.8rem 3rem;
     box-shadow: 0 0.2rem 0.5rem rgba(0, 0, 0, 0.1);
 
+    @include respond(tab-port) {
+      font-size: 1.7rem;
+      padding: 1rem 3rem;
+    }
+
+    @include respond(phone) {
+      font-size: 2rem;
+      padding: 1.1rem 3.5rem;
+    }
+
+    @include respond(phone-sm) {
+      font-size: 2.5rem;
+      padding: 1.1rem 4rem;
+    }
+
     &:active {
       background-color: #fff;
       color: var(--color-primary-light);
       border: 1px solid var(--color-primary-light);
+    }
+  }
+
+  &--footer {
+    font-size: 1.8rem;
+    border-radius: 5px;
+    padding: 1.5rem 5rem;
+
+    @include respond(tab-port) {
+      font-size: 1.5rem;
+      align-self: end;
+    }
+
+    @include respond(phone-sm) {
+      font-size: 3rem;
+      align-self: end;
+      padding: 2rem 7.5rem;
     }
   }
 }

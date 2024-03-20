@@ -1,0 +1,199 @@
+.about {
+  display: flex;
+  flex-direction: column;
+  gap: 8rem;
+  justify-content: center;
+  max-width: 80vw;
+  margin: auto;
+  margin-bottom: 14rem;
+
+  @include respond(phone-sm) {
+    gap: 25rem;
+  }
+
+  &__info {
+    display: flex;
+    flex-direction: column;
+    gap: 3rem;
+    align-items: center;
+    justify-content: center;
+
+    @include respond(phone) {
+      gap: 4rem;
+    }
+
+    &__text {
+      font-size: 2.7rem;
+      font-weight: 500;
+      text-align: center;
+      max-width: 75rem;
+      line-height: 1.5;
+
+      @include respond(phone-sm) {
+        font-size: 3.5rem;
+      }
+    }
+  }
+
+  &__image {
+    width: 100%;
+    margin: auto;
+  }
+
+  &__details {
+    display: flex;
+    justify-content: center;
+    gap: 45rem;
+
+    @include respond(tab-land) {
+      gap: 35rem;
+    }
+
+    @include respond(phone) {
+      gap: 23rem;
+    }
+
+    @include respond(phone-sm) {
+      flex-direction: column;
+      align-items: center;
+      gap: 15rem;
+    }
+
+    &__comm {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+
+      &__img {
+        width: 5rem;
+        align-self: self-start;
+
+        @include respond(phone) {
+          width: 4.5rem;
+        }
+
+        @include respond(phone-sm) {
+          width: 6rem;
+        }
+      }
+
+      &__text {
+        font-size: 2.6rem;
+        font-family: "Poppins";
+        text-align: center;
+        color: var(--color-grey);
+        margin-top: 0.5rem;
+
+        @include respond(phone) {
+          font-size: 2rem;
+          margin-top: 0;
+        }
+
+        @include respond(phone-sm) {
+          font-size: 3rem;
+          margin-top: 0;
+        }
+      }
+    }
+  }
+}
+
+.features {
+  display: flex;
+  flex-direction: column;
+}
+
+.feature {
+  display: flex;
+  flex-direction: column;
+
+  &__img-desktop {
+    display: block;
+
+    @include respond(phone-sm) {
+      display: none;
+    }
+  }
+
+  &__img-mobile {
+    display: none;
+
+    @include respond(phone-sm) {
+      display: block;
+    }
+  }
+
+  &__content {
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+    padding: 7rem 0;
+    background-color: var(--color-neutral-pale);
+
+    @include respond(phone-sm) {
+      flex-direction: column-reverse;
+      gap: 18rem;
+      padding: 20rem 10rem;
+    }
+
+    &__mid {
+      background-color: #fff;
+      margin-top: 13rem;
+      margin-bottom: 18rem;
+
+      @include respond(phone-sm) {
+        flex-direction: column;
+        margin-top: 20rem;
+        margin-bottom: 30rem;
+      }
+    }
+
+    &__picture {
+      width: 30vw;
+
+      @include respond(phone-sm) {
+        width: 70vw;
+      }
+    }
+
+    &__text {
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      gap: 2rem;
+
+      &__p {
+        font-size: 2rem;
+        text-align: left;
+        max-width: 37vw;
+
+        @include respond(tab-port) {
+          max-width: 46vw;
+        }
+
+        @include respond(phone-sm) {
+          font-size: 4rem;
+          max-width: 100rem;
+          text-align: center;
+          line-height: 1.5;
+        }
+      }
+    }
+  }
+}
+
+.register {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 3rem;
+
+  margin: 20rem 0;
+
+  &__title {
+    @include respond(phone-sm) {
+      max-width: 60rem;
+    }
+  }
+}
