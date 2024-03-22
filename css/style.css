@@ -337,6 +337,10 @@ body {
               top: 7rem;
               color: var(--color-secondary);
               font-size: 1.4rem; }
+              @media only screen and (max-width: 23.49em) {
+                .footer__content__newsletter__form__input-container__input__error-message {
+                  top: 10rem;
+                  font-size: 2rem; } }
             .footer__content__newsletter__form__input-container__input:invalid:focus ~ .footer__content__newsletter__form__input-container__input__error-message {
               display: block; }
 
